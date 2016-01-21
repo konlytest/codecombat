@@ -1,0 +1,156 @@
+extends /templates/base
+
+block content
+  form.form.hide
+    h1.text-center Request a Quote
+    p.text-center Get CodeCombat in your classroom, club, school or district!
+
+    .row
+      .col-sm-offset-2.col-sm-4
+        .form-group
+          label.control-label Name
+          input.form-control(name="name")
+          
+      .col-sm-4
+        .form-group
+          label.control-label Email
+          input.form-control(name="email")
+    
+    .row
+      .col-sm-offset-2.col-sm-4
+        .form-group
+          label.control-label
+            | Phone number
+            span.spl.text-muted (optional)
+          .help-block
+            em.text-info Where can we reach you during the workday?
+          input.form-control(name="phoneNumber")
+          
+      .col-sm-4
+        .form-group
+          label.control-label Your role
+          .help-block
+            em.text-info Select your primary role.
+          select.form-control(name="role")
+            option Teacher
+            option Technology coordinator
+            option Advisor
+            option Principal
+            option Superintendent
+            option Parent
+    
+    .row
+      .col-sm-offset-2.col-sm-8
+        hr
+    
+    .row
+      .col-sm-offset-2.col-sm-4
+        .form-group
+          label.control-label Name of School/District
+          input.form-control(name="organization")
+          
+      .col-sm-4
+        .form-group
+          label.control-label City
+          input.form-control(name="city")
+          
+    .row
+      .col-sm-offset-2.col-sm-4
+        .form-group
+          label.control-label State
+          input.form-control(name="state")
+          
+      .col-sm-4
+        .form-group
+          label.control-label Country
+          input.form-control(name="country")
+          
+    .row
+      .col-sm-offset-2.col-sm-8
+        hr
+          
+    .row
+      .col-sm-offset-2.col-sm-5
+        .form-group
+          label.control-label Number of students
+          .help-block
+            em.text-info How many do you anticipate enrolling in CodeCombat?
+          select.form-control(name="numStudents")
+            option 1-10
+            option 11-50
+            option 51-100
+            option 101-200
+            option 201-500
+            option 501-1000
+            option 1000+
+            
+    .row
+      .col-sm-offset-2.col-sm-4
+        .form-group
+          label.control-label Education level
+          .help-block
+            em.text-info Choose as many as apply.
+            
+    .row
+      .col-sm-offset-2.col-sm-2
+        label.control-label.checkbox
+          input(type="checkbox" name="educationLevel" value="Elementary")
+          | Elementary School
+      .col-sm-2
+        label.control-label.checkbox
+          input(type="checkbox" name="educationLevel" value="High")
+          | High School
+      .col-sm-6
+        .checkbox-inline
+          label.control-label
+            input#other-education-level-checkbox(type="checkbox")
+            | Other
+            br
+            | (please explain)
+        input#other-education-level-input.form-control
+        
+    .row
+      .col-sm-offset-2.col-sm-2
+        label.control-label.checkbox
+          input(type="checkbox" name="educationLevel" value="Middle")
+          | Middle School
+      .col-sm-2
+        label.control-label.checkbox
+          input(type="checkbox" name="educationLevel" value="College+")
+          | College or higher
+        
+    #anything-else-row.row
+      .col-sm-offset-2.col-sm-8
+        label.control-label
+          | Anything else we should know?
+          span.spl.text-muted (optional)
+        
+        textarea.form-control(rows=8, name="notes")
+        
+    #buttons-row.row.text-center
+      input#submit-request-btn.btn.btn-primary(type="submit") Submit Request
+      
+      
+  #form-submit-success.text-center
+    h1.text-center Thanks for requesting a quote!
+    p.text-center 
+      | We'll be in touch soon. Questions? email
+      a.spl(href="mailto:team@codecombat.com") team@codecombat.com
+      | .
+    
+    p.text-center
+      | In the meantime, log into your account to access your
+      strong.spl.spr two free enrollments
+      | .
+      br
+      | And as always, the first hour of content is free for unlimited students!
+    
+    p
+      button.btn.btn-info#login-btn(data-i18n="login.log_in")
+    
+    p.text-center
+      | or finish signing up:
+    
+    p.text-center
+      button.btn.btn-info#signup-btn(data-i18n="login.sign_up")
+    

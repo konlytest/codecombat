@@ -122,6 +122,7 @@ module.exports = class CocoRouter extends Backbone.Router
 
     'teachers': go('TeachersView')
     'teachers/freetrial': go('TeachersFreeTrialView')
+    'teachers/quote': go('RequestQuoteView')
 
     'test(/*subpath)': go('TestView')
 
