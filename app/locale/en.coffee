@@ -617,6 +617,12 @@
     hear_about: "How did you hear about CodeCombat?"
     fill_fields: "Please fill out all fields."
     thanks: "Thanks! We'll send you setup instructions shortly."
+    
+  teachers_quote:
+    title: "Request a Quote"
+    subtitle: "Get CodeCombat in your classroom, club, school or district!"
+    phone_number: "Phone number"
+    
 
   versions:
     save_version_title: "Save New Version"

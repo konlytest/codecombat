@@ -2,25 +2,25 @@ extends /templates/base
 
 block content
   form.form.hide
-    h1.text-center Request a Quote
-    p.text-center Get CodeCombat in your classroom, club, school or district!
+    h1.text-center(data-i18n="teachers_quote.title")
+    p.text-center(data-i18n="teachers_quote.subtitle")
 
     .row
       .col-sm-offset-2.col-sm-4
         .form-group
-          label.control-label Name
+          label.control-label(data-i18n="general.name") 
           input.form-control(name="name")
           
       .col-sm-4
         .form-group
-          label.control-label Email
+          label.control-label(data-i18n="general.email")
           input.form-control(name="email")
     
     .row
       .col-sm-offset-2.col-sm-4
         .form-group
           label.control-label
-            | Phone number
+            span(data-i18n="teachers_quote.phone_number")
             span.spl.text-muted (optional)
           .help-block
             em.text-info Where can we reach you during the workday?
