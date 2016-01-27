@@ -624,6 +624,7 @@
     thanks: "Thanks! We'll send you setup instructions shortly."
     
   teachers_quote:
+    name: "Quote Form"
     title: "Request a Quote"
     subtitle: "Get CodeCombat in your classroom, club, school or district!"
     phone_number: "Phone number"
