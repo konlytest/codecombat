@@ -133,24 +133,16 @@ block content
       
   #form-submit-success.text-center
     h1.text-center Thanks for requesting a quote!
-    p.text-center 
+    p.text-center
       | We'll be in touch soon. Questions? email
       a.spl(href="mailto:team@codecombat.com") team@codecombat.com
       | .
     
-    p.text-center
-      | In the meantime, log into your account to access your
-      strong.spl.spr two free enrollments
-      | .
-      br
-      | And as always, the first hour of content is free for unlimited students!
-    
-    p
-      button.btn.btn-info#login-btn(data-i18n="login.log_in")
-    
-    p.text-center
-      | or finish signing up:
-    
-    p.text-center
-      button.btn.btn-info#signup-btn(data-i18n="login.sign_up")
-    
+    if me.isAnonymous()
+      p.text-center Login or sign up with your account below to access your two free enrollments (we’ll notify you by email when they have been approved, which usually takes less than 48 hours). As always, the first hour of content is free for an unlimited number of students.
+        
+      p.text-center
+        button#login-btn.btn.btn-info(data-i18n="login.log_in")
+        button#signup-btn.btn.btn-info(data-i18n="login.sign_up")
+    else
+      p.text-center Your two free enrollments are pending approval. We’ll notify you by email when they have been approved (usually within 48 hours). As always, the first hour of content is free for an unlimited number of students.
