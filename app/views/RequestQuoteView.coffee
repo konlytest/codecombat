@@ -74,6 +74,7 @@ module.exports = class RequestQuoteView extends RootView
       initialValues: { email: @trialRequest.get('properties').email }
     })
     @openModalView(modal)
+    window.nextURL = '/courses/teachers'
     
   onClickSignupButton: ->
     props = @trialRequest.get('properties')
@@ -86,3 +87,4 @@ module.exports = class RequestQuoteView extends RootView
       }
     })
     @openModalView(modal)
+    window.nextURL = '/courses/teachers'
